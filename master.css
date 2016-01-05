@@ -1,0 +1,301 @@
+body{
+	font: normal 16px/150% Merriweather, Lucida Grande, Georgia, serif;
+  	color: #222;
+  	background: #f5f5f5;
+  	margin: 0;
+}
+.nav{
+	background: gold;
+	height: 27px;
+	padding-top: 5px;
+	padding-left: 5px;
+	border-radius: 3px;
+	
+}
+.right {
+    position: absolute;
+    right: 50px;
+}
+.right2 {
+    position: absolute;
+    right: 150px;
+}
+
+a{
+	color: black;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+.a-white{
+	text-decoration: none;
+	color: #f5f5f5;
+}
+.sol{
+	margin-top: 10px;
+	padding-top: 5px;
+	height: 175px;
+	background: #5b5b5b;
+	width: 200px;
+	padding-left: 3px;
+	float: left;
+	border-radius: 3px;
+	margin-left: 10px;
+	color: white;
+}
+.gobek{
+	margin-top: 10px;
+	padding-top: 5px;
+	height: 300px;
+	padding-left: 3px;
+	float: left;
+	margin-left: 220px;
+	position: absolute;
+	width: auto;
+	margin-right: 10px;
+
+}
+.gobek2{
+	margin-top: 10px;
+	padding-top: 5px;
+	height: 300px;
+	padding-left: 3px;
+	float: left;
+	margin-left: 540px;
+	position: absolute;
+	margin-right: 10px;
+
+}
+.oneri{
+	margin-top: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 50px;
+	background: #5b5b5b;
+	width: auto;
+	padding-left: 3px;
+	color: white;
+	border-radius: 3px;
+	padding-top: 1px;
+	padding-bottom: 5px;
+}
+
+.oneri-box{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 20px;
+	background: #5b5b5b;
+	width: 100px;
+	height: 50px;
+	padding-left: 3px;
+	color: white;
+	border-radius: 3px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.center{
+	text-align: center;
+}
+
+
+.button {
+	margin: 0;
+	padding: 0;
+    display: inline-block;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 1.2em;
+    outline: none;
+    color: black;
+    width: 300px;
+    height: 170px;
+    background: #ebebeb;
+    
+}
+
+.button span {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.button:before,
+.button:after {
+    content: '';
+    position: absolute;
+    top: 0.67em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
+}
+
+/* :before */
+
+.button:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+/* :after */
+
+.button:after {
+    content: attr(data-active);
+    -webkit-transform: translate(150%,0);
+    -moz-transform: translate(150%,0);
+    -ms-transform: translate(150%,0);
+    -o-transform: translate(150%,0);
+    transform: translate(150%,0);
+}
+
+/* Span on :hover and :active */
+
+.button:hover span,
+.button:active span {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+
+/*  
+    We show :before pseudo-element on :hover 
+    and :after pseudo-element on :active 
+*/
+
+.button:hover:before,
+.button:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+/* 
+  We hide :before pseudo-element on :active
+*/
+
+.button:active:before {
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.icerik
+{    
+    width: 200px;
+    height:100px;
+    float: left;
+    margin-left:10px;
+    margin-top:25px;    
+}
+
+h2{
+    font-size: 15px;
+}
+#resim-don
+{   
+    -webkit-perspective: 900px;
+    -moz-perspective: 900px;
+    perspective: 900px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+#resim-don {
+    list-style:none;
+    }
+
+#resim-don .resim, #resim-don .aciklama
+{  
+    background-color: #F2F2F2;
+    padding: 10px;
+    width: 200px;
+    height: 145px;    
+    position: absolute;   
+    
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    -moz-transition: -moz-transform 1s ease-in-out;
+    -o-transition: -o-transform 1s ease-in-out;
+    -ms-transition: -ms-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0px 25px 19px -18px #545454;
+    -webkit-box-shadow: 0px 25px 19px -18px #545454;
+    -moz-box-shadow: 0px 25px 19px -18px #545454;
+    -o-box-shadow: 0px 25px 19px -18px #545454;
+}
+#resim-don .aciklama
+{
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    
+}
+
+
+#resim-don:hover .aciklama
+{    
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+#resim-don:hover .resim
+{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);    
+}
