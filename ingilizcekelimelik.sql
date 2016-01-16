@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Jan 16, 2016 at 05:41 PM
+-- Generation Time: Jan 16, 2016 at 06:54 PM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -51,14 +51,15 @@ CREATE TABLE `user` (
   `username` varchar(100) NOT NULL,
   `password` text NOT NULL,
   `email` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`u_id`, `username`, `password`, `email`) VALUES
-(1, 'oguzhan', '123', 'oguzhantasc@gmail.com');
+(1, 'oguzhan', '123', 'oguzhantasc@gmail.com'),
+(2, 'zeki', '123', 'zeki@zeki.com');
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,7 @@ ALTER TABLE `box`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `vocabulary`
 --
