@@ -33,7 +33,7 @@
 		}
 	}else{
 ?>
-
+	<div><p>Box oluşturmadınız. Kelimeleri gruplayarak kaydetmek için hemen bir box oluşturun.</p></div>
 <?php 
 	}
 ?>
