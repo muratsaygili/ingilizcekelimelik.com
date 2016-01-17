@@ -45,6 +45,40 @@ class crud{
             echo $e->getMessage();
         }
     }
+    public function getUserData($id)
+    {
+        try {
+            $userData = $this->db->prepare("select * from user where u_id = ?");
+            $userData->bindParam(1,$id);
+            $check = $userData->execute();
+            if ($check) {
+                if ($userData->rowCount() == 1) {
+                    return $userData->fetchAll();
+                }
+            }
+            return false;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+    public function getBox($id)
+    {
+        try {
+            $boxes = $this->db->prepare("select * from box where u_id = ?");
+            $boxes->bindParam(1,$id);
+            $check = $boxes->execute();
+            if ($check) {
+                if ($boxes->rowCount()>0) {
+                    return $boxes->fetchAll();
+                }
+                return false;
+            }
+            return false;
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
 
 }
 
