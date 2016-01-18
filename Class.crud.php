@@ -79,6 +79,18 @@ class crud{
             echo $e->getMessage();
         }
     }
+    public function userUpdate($id,$username,$email)
+    {
+        $updatedUser = $this->db->prepare("update user set username = ?, email = ? where u_id = ?");
+        $updatedUser->bindParam(1,$username);
+        $updatedUser->bindParam(2,$email);
+        $updatedUser->bindParam(3,$id);
+        $check = $updatedUser->execute();
+        if ($check) {
+            return true;
+        }
+        return false;
+    }
 
 }
 

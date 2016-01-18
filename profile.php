@@ -15,7 +15,7 @@
 		<div class="center">Profil</div>
 		<p>Kullanıcı Adı: <?php echo $user[0]["username"]; ?></p>
 		<p>Kullanıcı Eposta: <?php echo $user[0]["email"]; ?></p>
-		<div class="center"><button style="font-size: 16px;">Bilgileri Güncelle</button></div>
+		<div class="center"><a href="p_update.php"><button style="font-size: 16px;">Bilgileri Güncelle</button></a></div>
 	</div>
 	<div class="gobek">
 		<div class=""><button style="font-size: 16px;">Box Oluştur</button></div>
