@@ -32,6 +32,8 @@
 		<div class=""><a href="create_box.php"><button style="font-size: 16px;">Box Oluştur</button></a></div>
 		<br>
 		<div class=""><a href="vocabulary.php"><button style="font-size: 16px;">Kelime Oluştur</button></a></div>
+		<br>
+		<div class=""><a href="index.php"><button style="font-size: 16px;">Öğrenmeye Başla</button></a></div>
 	</div>
 	<div class="gobek3">
 		<b>Box Listesi</b><br>
