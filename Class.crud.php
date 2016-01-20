@@ -172,6 +172,33 @@ class crud{
                echo $e->getMessage();
         } 
     }
+    public function findBoxName($b_id)
+    {
+        try {
+            $name = $this->db->prepare("select * from box where b_id = ?");
+            $name->bindParam(1,$b_id);
+            $name->execute();
+            return $name->fetchAll();
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+    public function updateBoxName($box_name,$u_id,$old_name)
+    {
+        try {
+             $box = $this->db->prepare("update box set b_name = ? where b_name = ? and u_id = ?");  
+             $box->bindParam(1,$box_name);
+             $box->bindParam(2,$old_name);
+             $box->bindParam(3,$u_id);
+             $check = $box->execute();
+             if ($check) {
+                 return true;
+             }return false;
+        }catch (PDOException $e) {
+               echo $e->getMessage();
+        }  
+    }
 
 }
 

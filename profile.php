@@ -41,9 +41,10 @@
 ?>
 		<div class="">
 			>> <a class="a-blue" href="box.php?b_id=<?php echo $box['b_id'];?>"><?php echo $box['b_name']; ?></a>
-			<div class="right3">
+			<div class="right3"><br>
+				<a href="u_box.php?u_id=<?php echo $box['b_id']; ?>">Güncelle</a>|
 				<a href="profile.php?d_id=<?php echo $box['b_id']; ?>">Sil</a>
-			</div>
+			</div><br>
 		</div>
 <?php
 		}
