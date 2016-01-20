@@ -1,52 +1,57 @@
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="master.css">
-	<meta charset="utf-8">
-</head>
-<body>
-	<div class="nav">
-		<div>
-		<a href="index.php">ingilizce kelimelik</a>
-		<a class="right" href="register.php">Kayıt Ol</a>
-		<a class="right2" href="login.php">Giriş Yap</a>
-		</div>
+<?php 
+	require_once "connection.php";
+	ob_start();
+	session_start();
+	require_once "base.php";
+	$boxes = $crud->getBox($_SESSION['id']);
+	if ($_SESSION) {
+		if ($_GET['b_id']) {
+			$vocabulary = $crud->getRandom($_GET['b_id']);
+
+?>
+
+	<div class="gobek5">	
+		<ul class="icerik">
+	        <div id="resim-don">
+	            <li class="resim">
+	                <p class="center" style="padding-top:20%;"><?php echo $vocabulary[0]['v_name']; ?></p>
+	            </li>
+	            <li class="aciklama">
+	                <p>Anlamı: <?php echo $vocabulary[0]['v_trans']; ?></p>
+	                <p>Örnek Cümle: <?php echo $vocabulary[0]['v_example']; ?></p>
+	            </li>
+	        </div>
+
+	    </ul>
 	</div>
-	<div class="main">
-		
-	<ul class="icerik">
-        <div id="resim-don">
-            <li class="resim">
-                <p>Hello!</p>
-            </li>
-            <li class="aciklama">
-                <p>Anlamı: Merhaba!</p>
-                <p>Örnek Cümle: Hello! Dear friends! </p>
-            </li>
-        </div>
-    </ul>
+	<div style="padding-top:400px;" class="center">
+		<a href="index.php?b_id=<?php echo $_GET['b_id']; ?>" class="a-blue">Başka Bir Kelime Getir</a>
+	</div>
 	
-	</div>
-	<div class="oneri">
+<?php
+		}else{
+?>
+	<div class="gobek">
+		<p>Box Seçin:</p>
 
-		<h3 class="center">Recommended Boxes</h3>
+		<form action="" method="get">
+				<select name="b_id">
+				  <?php foreach ($boxes as $box) {
+?>
+					<option value="<?php echo $box['b_id'] ?>"><?php echo $box['b_name'] ?></option>
+<?php
+				  } ?>
+				</select>
+				
+				<br><br>
+				<div class=""><button type="submit" style="font-size: 16px;">Box Seç</button></div>
+			</form>
+		
 	</div>
-	<div class="oneri-box center"><a class="a-white" href="">Box 1</a></div>
-	<div class="sol">
-		<h3 class="center">Panel</h3>
-		<ul>
-			<li><a class="a-white" href="">Random Box</a></li>
-			<li><a class="a-white" href="">Create Box</a></li>
-			<li><a class="a-white" href="">Show Your Boxes</a></li>
+<?php
+		}
+	}else{
+		header("Location:intro.php");
+	}
+?>
 
-		</ul>
-	</div>
-	<div class="gobek2">
-		<a href="">Random Vocabulary</a>
-		<br>
-		<a href="">English - Turkish Mode</a>
-		<br>
-		<a href="">Turkish - English Mode</a>
-	</div>
-</body>
-</html>

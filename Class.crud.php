@@ -199,6 +199,20 @@ class crud{
                echo $e->getMessage();
         }  
     }
+    public function getRandom($b_id)
+    {
+        try {
+           $vocabulary = $this->db->prepare("select * from vocabulary WHERE b_id = ? ORDER BY RAND() LIMIT 1");
+            $vocabulary->bindParam(1,$b_id);
+            $check = $vocabulary->execute();
+            if ($check) {
+                return $vocabulary->fetchAll();
+            }return false;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+
+    }
 
 }
 
