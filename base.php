@@ -10,6 +10,7 @@
 	<div class="nav">
 		<div>
 		<a href="index.php">ingilizce kelimelik</a>
+		<a class="right2" href="profile.php">Profil</a>
 		<a class="right" href="logout.php">Çıkış</a>
 		</div>
 	</div>';

@@ -12,6 +12,18 @@ body{
 	border-radius: 3px;
 	
 }
+td{
+    width: 300px;
+    height: 70px;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+.small{
+    width: 100px;
+    height: 70px;
+    border: 1px solid black;
+    padding-left: 10px;
+}
 .right {
     position: absolute;
     right: 50px;
@@ -20,7 +32,9 @@ body{
     position: absolute;
     right: 150px;
 }
-
+.right3 {
+    text-align: right;
+}
 a{
 	color: black;
 }
@@ -82,6 +96,30 @@ a:active {
 	margin-right: 10px;
 
 }
+.gobek3{
+    margin-top: 10px;
+    padding-top: 5px;
+    height: 300px;
+    padding-left: 3px;
+    float: left;
+    margin-left: 540px;
+    position: absolute;
+    margin-right: 10px;
+    width: 300px;
+
+}
+.gobek4{
+    margin-top: 10px;
+    padding-top: 5px;
+    height: 300px;
+    padding-left: 3px;
+    float: left;
+    margin-left: 100px;
+    position: absolute;
+    width: auto;
+    margin-right: 10px;
+
+}
 .oneri{
 	margin-top: 200px;
 	margin-left: 10px;
@@ -113,6 +151,7 @@ a:active {
 .center{
 	text-align: center;
 }
+
 
 
 .button {
