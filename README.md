@@ -1,7 +1,7 @@
 # ingilizcekelimelik.com
 
-ingilizcekelimelik is learn online vocabulary system based web. 
-Design is old school.
+ingilizcekelimelik is web based online vocabulary learning system. 
+Designed for primary school.
 
 
 <img src="Screenshots/1.png">
